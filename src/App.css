@@ -1,0 +1,59 @@
+.Header {
+  color: white;
+  text-align: center;
+}
+
+.Content{
+  display: flex;
+  justify-content: center;
+}
+
+.Description{
+  padding: 1rem;
+}
+
+.DescriptionText{
+  width: 60%;
+}
+
+.FormAndImages{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.QuestionForm{
+  flex: 0 0 50%; 
+}
+
+.QuestionInput{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.Footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LogoFilo{
+  width: 184px;
+  height: 82px;
+}
+
+.LogoMuseo{
+  margin-left: 1rem;
+}
+
+.ImagenMuseo1{
+  
+}
+
+.SubmitQuestion {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
