@@ -4,15 +4,15 @@ import Museo1 from "../images/imagen_museo_small.png";
 import Museo2 from "../images/imagen_museo2_small.png";
 
 function HomeView({ sendQuestion }) {
-  const handleSubmit = (values) => {
-    sendQuestion(values);
-    // window.location.href = "/museum-asks";
+  const handleSubmit = async (values) => {
+    await sendQuestion(values);
+    window.location.href = "/museum-asks";
   };
 
   return (
     <div className={"Description"}>
       <div className={"DescriptionText"}>
-        <h3>
+        <h3 className={"Subtitle"}>
           Los museos no existirían si no nos hiciéramos preguntas: sobre los
           diferentes pueblos, su historia, sus objetos y saberes. Pero también
           aquellas que surgen de nuestra observación e imaginación y que quizás

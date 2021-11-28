@@ -1,6 +1,7 @@
 .Header {
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 .Content{
@@ -13,7 +14,39 @@
 }
 
 .DescriptionText{
-  width: 60%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Subtitle{
+  width: 70%;
+}
+
+.Thanks{
+  margin-top: 1rem;
+}
+
+.ButtonQuestion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.MuseumQuestion{
+  background-color: #001529;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.UsersQuestions {  
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  text-align: center;
 }
 
 .FormAndImages{
@@ -49,7 +82,12 @@
 }
 
 .ImagenMuseo1{
+  margin-left: 2rem;
   
+}
+
+.ImagenMuseo2{
+  margin-right: 4rem;
 }
 
 .SubmitQuestion {
