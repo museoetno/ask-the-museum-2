@@ -1,47 +1,75 @@
-.Header {
+.MainHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.MainHeader h1,
+h4 {
   color: white;
   text-align: center;
   cursor: pointer;
 }
 
-.Content{
+.SubHeader {
+  position: absolute;
+  top: 26px;
+  font-size: 18px;
+}
+
+.Content {
   display: flex;
   justify-content: center;
 }
 
-.Description{
+.Description {
   padding: 1rem;
 }
 
-.DescriptionText{
+.DescriptionText {
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
-.Subtitle{
-  width: 70%;
+.Title {
+  width: 100%;
+  font-size: 28px;
 }
 
-.Thanks{
-  margin-top: 1rem;
-}
-
-.ButtonQuestion{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.MuseumQuestion{
-  background-color: #001529;
-  color: white;
-  padding: 1rem;
+.Subtitle {
+  width: 80%;
+  font-size: 20px;
   text-align: center;
 }
 
-.UsersQuestions {  
+.Thanks {
+  margin-top: 1rem;
+  font-size: 22px;
+  text-align: center;
+}
+
+.ant-input:placeholder-shown {
+  font-size: 18px !important;
+}
+
+.ButtonQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.MuseumQuestion {
+  background-color: #873c50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 50%;
+}
+
+.UsersQuestions {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -49,49 +77,80 @@
   text-align: center;
 }
 
-.FormAndImages{
+.FormAndImages {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.QuestionForm{
-  flex: 0 0 50%; 
+.QuestionForm {
+  flex: 0 0 50%;
 }
 
-.QuestionInput{
+.QuestionInput {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
 
-.Footer{
+.Footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 0.5rem;
 }
 
-.LogoFilo{
+.LogoFilo {
   width: 184px;
   height: 82px;
+  border: 1px solid black;
 }
 
-.LogoMuseo{
+.LogoMuseo {
   margin-left: 1rem;
+  border: 1px solid black;
 }
 
-.ImagenMuseo1{
-  margin-left: 2rem;
+.ImagenMuseo1 {
+  border: 1px solid black;
+  width: 150px;
+  height: 230px;
+  margin-right: 10rem;
+}
+
+.ImagenMuseo2 {
+  border: 1px solid black;
+  width: 150px;
+  height: 230px;
+  margin-left: 10rem;
+}
+
+.ImagenMuseo3 {
+  border: 1px solid black;
+  width: 150px;
+  height: 230px;
   
 }
 
-.ImagenMuseo2{
-  margin-right: 4rem;
+.ImagenMuseo4 {
+  border: 1px solid black;
+  width: 150px;
+  height: 160px;
+ 
 }
 
 .SubmitQuestion {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.MuseumAsksImages{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import QuestionForm from "../components/QuestionForm";
-import Museo1 from "../images/imagen_museo_small.png";
-import Museo2 from "../images/imagen_museo2_small.png";
+import Museo1 from "../images/imagen_museo_medium.png";
+import Museo2 from "../images/imagen_museo2_medium.png";
 
 function HomeView({ sendQuestion }) {
   const handleSubmit = async (values) => {
@@ -13,12 +13,14 @@ function HomeView({ sendQuestion }) {
     <div className={"Description"}>
       <div className={"DescriptionText"}>
         <h3 className={"Subtitle"}>
-          Los museos no existirían si no nos hiciéramos preguntas: sobre los
-          diferentes pueblos, su historia, sus objetos y saberes. Pero también
-          aquellas que surgen de nuestra observación e imaginación y que quizás
-          no tengan respuesta. Si visitaste el museo o sus redes sociales, te
-          invitamos a ampliar nuestra Colección de Preguntas y a cambio te
-          regalaremos una…
+          Los museos existen porque nos hacemos preguntas: sobre los diferentes
+          pueblos, sus historias, objetos y saberes.
+          <br />
+          Pero también aquellas preguntas que surgen de nuestra observación e
+          imaginación y que quizás no tengan respuesta.
+          <br /> Si visitaste el museo o sus redes sociales, te invitamos a
+          ampliar nuestras Preguntas de Colección.
+          <br />A cambio, te regalaremos una…
         </h3>
       </div>
       <div className="FormAndImages">

@@ -10,6 +10,7 @@ function QuestionForm({ onFinish, onFinishFailed }) {
         onFinish={(values) => onFinish(values)}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
+        size="large"
       >
         <Form.Item
           name="question"
@@ -28,8 +29,12 @@ function QuestionForm({ onFinish, onFinishFailed }) {
         </Form.Item>
 
         <Form.Item className={"SubmitQuestion"}>
-          <Button type="primary" htmlType="submit">
-            Enviar pregunta
+          <Button
+            type="primary"
+            htmlType="submit"
+            style={{ background: "#873c50", borderColor: "#873c50" }}
+          >
+            Compartir
           </Button>
         </Form.Item>
       </Form>

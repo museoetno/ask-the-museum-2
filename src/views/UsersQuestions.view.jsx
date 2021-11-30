@@ -20,10 +20,20 @@ function UsersQuestions({ getUsersQuestions }) {
   return (
     <div className="UsersQuestions">
       {activeQuestions.map((q) => (
-        <Card bordered size="small" style={{ width: 200, margin: "1rem" }}>
+        <Card
+          bordered
+          size="small"
+          style={{
+            width: 200,
+            margin: "1rem",
+            background: "#873c50",
+            color: "white",
+          }}
+        >
           <p style={{ fontStyle: "italic", fontWeight: "bold" }}>
             {q.question}
           </p>
+          <p>{q.personalInfo}</p>
         </Card>
       ))}
     </div>

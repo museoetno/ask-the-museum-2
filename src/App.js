@@ -74,11 +74,22 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Layout style={{ height: "100vh" }}>
-        <Header>
-          <h1 onClick={goToHome} className="Header">
-            PREGUNTAS DE COLECCIÓN
-          </h1>
+      <Layout
+        style={{
+          height: "100vh",
+          fontFamily: "Geogrotesque Regular",
+          backgroundColor: "#dadcdf",
+        }}
+      >
+        <Header style={{ height: "80px", background: "#f73337" }}>
+          <div className="MainHeader">
+            <h4 className="Title" onClick={() => goToHome()}>
+              PREGUNTAS DE COLECCIÓN
+            </h4>
+            <h4 className="SubHeader">
+              Un espacio del museo para la curiosidad
+            </h4>
+          </div>
         </Header>
         <Content className="Content">
           <Routes>
@@ -96,14 +107,14 @@ function App() {
             />
           </Routes>
         </Content>
-        <Footer className="Footer">
+        <div className="Footer" style={{ background: "#dadcdf" }}>
           <img
             src={LogoFilo}
             alt="Facultad de Filosofía y Letras"
             className="LogoFilo"
           />
           <img src={LogoMuseo} alt="Filosofia" className="LogoMuseo" />
-        </Footer>
+        </div>
       </Layout>
     </BrowserRouter>
   );
