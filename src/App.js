@@ -86,7 +86,7 @@ function App() {
           <div className="MainHeader">
             <h4 className="Title">PREGUNTAS DE COLECCIÓN</h4>
             <h4 className="SubHeader">
-              Un espacio del museo para la curiosidad
+              Un espacio del Museo para la curiosidad
             </h4>
           </div>
         </Header>
