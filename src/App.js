@@ -1,6 +1,6 @@
 import "antd/dist/antd.css";
 import "./App.css";
-import { Button, Layout } from "antd";
+import { Layout } from "antd";
 import HomeView from "./views/Home.view";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
@@ -9,11 +9,9 @@ import LogoFilo from "./images/logo_filo.jpg";
 import LogoMuseo from "./images/logo_museo.jpg";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import { useEffect, useState } from "react";
 // Initialize Cloud Firestore through Firebase
 import { getFirestore } from "firebase/firestore";
 import UsersQuestions from "./views/UsersQuestions.view";
@@ -29,11 +27,11 @@ const firebaseConfig = {
   measurementId: "G-RPTFM0900D",
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const db = getFirestore();
 
 function App() {
-  const { Header, Footer, Content } = Layout;
+  const { Header, Content } = Layout;
 
   const getMuseumQuestions = async () => {
     let data = [];
