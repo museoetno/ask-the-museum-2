@@ -80,7 +80,7 @@ function App() {
         }}
       >
         <Header
-          style={{ height: "80px", background: "#f73337" }}
+          style={{ height: "80px", background: "#873c50" }}
           onClick={() => goToHome()}
         >
           <div className="MainHeader">
