@@ -81,11 +81,12 @@ function App() {
           backgroundColor: "#dadcdf",
         }}
       >
-        <Header style={{ height: "80px", background: "#f73337" }}>
+        <Header
+          style={{ height: "80px", background: "#f73337" }}
+          onClick={() => goToHome()}
+        >
           <div className="MainHeader">
-            <h4 className="Title" onClick={() => goToHome()}>
-              PREGUNTAS DE COLECCIÓN
-            </h4>
+            <h4 className="Title">PREGUNTAS DE COLECCIÓN</h4>
             <h4 className="SubHeader">
               Un espacio del museo para la curiosidad
             </h4>
