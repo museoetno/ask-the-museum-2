@@ -87,7 +87,7 @@ function App() {
             height: "100vh",
             fontFamily: "Geogrotesque Regular",
             backgroundColor: "#dadcdf",
-            minHeight: "800px",
+            minHeight: "750px",
           }}
         >
           <Header
