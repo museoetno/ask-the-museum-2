@@ -16,6 +16,7 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 import UsersQuestions from "./views/UsersQuestions.view";
 import MediaQuery from "react-responsive";
+import FondoMuseo from "./images/fondo.bmp";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -79,6 +80,17 @@ function App() {
     window.open("http://museo.filo.uba.ar/", "_blank");
   };
 
+  const isUsersQuestions = () => {
+    const path = window.location.href.split("/")[3];
+    return path === "users-questions";
+  };
+
+  const setBackground = () => {
+    if (isUsersQuestions()) {
+      return { backgroundImage: `url(${FondoMuseo})` };
+    }
+  };
+
   return (
     <BrowserRouter>
       <div>
@@ -109,7 +121,7 @@ function App() {
               </MediaQuery>
             </div>
           </Header>
-          <Content className="Content">
+          <Content className="Content" style={setBackground()}>
             <Routes>
               <Route
                 path="/"
@@ -127,30 +139,32 @@ function App() {
               />
             </Routes>
           </Content>
-          <div className="Footer" style={{ background: "#dadcdf" }}>
-            <MediaQuery minWidth={1224}>
-              <img
-                src={LogoFilo}
-                alt="Facultad de Filosofía y Letras"
-                className="LogoFilo"
-              />
-              <img src={LogoMuseo} alt="Filosofia" className="LogoMuseo" />
-            </MediaQuery>
-            <MediaQuery maxWidth={1224}>
-              <img
-                src={LogoFilo}
-                alt="Facultad de Filosofía y Letras"
-                className="LogoFiloMobile"
-                onClick={() => goToFilo()}
-              />
-              <img
-                src={LogoMuseo}
-                alt="Filosofia"
-                className="LogoMuseoMobile"
-                onClick={() => goToMuseoEtno()}
-              />
-            </MediaQuery>
-          </div>
+          {!isUsersQuestions() && (
+            <div className="Footer" style={{ background: "#dadcdf" }}>
+              <MediaQuery minWidth={1224}>
+                <img
+                  src={LogoFilo}
+                  alt="Facultad de Filosofía y Letras"
+                  className="LogoFilo"
+                />
+                <img src={LogoMuseo} alt="Filosofia" className="LogoMuseo" />
+              </MediaQuery>
+              <MediaQuery maxWidth={1224}>
+                <img
+                  src={LogoFilo}
+                  alt="Facultad de Filosofía y Letras"
+                  className="LogoFiloMobile"
+                  onClick={() => goToFilo()}
+                />
+                <img
+                  src={LogoMuseo}
+                  alt="Filosofia"
+                  className="LogoMuseoMobile"
+                  onClick={() => goToMuseoEtno()}
+                />
+              </MediaQuery>
+            </div>
+          )}
         </Layout>
       </div>
     </BrowserRouter>

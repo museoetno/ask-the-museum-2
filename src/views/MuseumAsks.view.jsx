@@ -34,12 +34,12 @@ function MuseumAsks({ getQuestions }) {
     <div>
       <MediaQuery minWidth={1224}>
         <h3 className="Thanks">
-          Gracias por dejarnos tu pregunta. El museo te regala una:
+          Gracias por dejarnos tu pregunta. El Museo te regala una:
         </h3>
       </MediaQuery>
       <MediaQuery maxWidth={1224}>
         <h3 className="ThanksMobile">
-          Gracias por dejarnos tu pregunta. El museo te regala una:
+          Gracias por dejarnos tu pregunta. El Museo te regala una:
         </h3>
       </MediaQuery>
 

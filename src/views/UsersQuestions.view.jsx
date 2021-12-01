@@ -22,7 +22,12 @@ function UsersQuestions({ getUsersQuestions }) {
   const checkMobile = () => (isTabletOrMobile ? "column" : "row");
 
   return (
-    <div className="UsersQuestions" style={{ flexDirection: checkMobile() }}>
+    <div
+      className="UsersQuestions"
+      style={{
+        flexDirection: checkMobile(),
+      }}
+    >
       {activeQuestions.map((q) => (
         <Card
           bordered
