@@ -52,13 +52,12 @@ h4 {
 .Subtitle {
   width: 80%;
   font-size: 20px;
-  text-align: center;
+  margin-left: 14rem;
 }
 
 .SubtitleMobile {
   width: 80%;
   font-size: 15px;
-  text-align: center;
 }
 
 .Thanks {

@@ -23,10 +23,6 @@ function MuseumAsks({ getQuestions }) {
   };
 
   const goToUserQuestions = () => {
-    // window.open(
-    //   "https://padlet.com/rodrigo_garciaseoane/y35engng8hywv803",
-    //   "_blank" // <- This is what makes it open in a new window.
-    // );
     window.location.href = "/users-questions";
   };
 

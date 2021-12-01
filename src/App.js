@@ -71,6 +71,14 @@ function App() {
     window.location.href = "/";
   };
 
+  const goToFilo = () => {
+    window.open("http://www.filo.uba.ar/", "_blank");
+  };
+
+  const goToMuseoEtno = () => {
+    window.open("http://museo.filo.uba.ar/", "_blank");
+  };
+
   return (
     <BrowserRouter>
       <div>
@@ -79,6 +87,7 @@ function App() {
             height: "100vh",
             fontFamily: "Geogrotesque Regular",
             backgroundColor: "#dadcdf",
+            minHeight: "800px",
           }}
         >
           <Header
@@ -132,11 +141,13 @@ function App() {
                 src={LogoFilo}
                 alt="Facultad de Filosofía y Letras"
                 className="LogoFiloMobile"
+                onClick={() => goToFilo()}
               />
               <img
                 src={LogoMuseo}
                 alt="Filosofia"
                 className="LogoMuseoMobile"
+                onClick={() => goToMuseoEtno()}
               />
             </MediaQuery>
           </div>
