@@ -15,6 +15,7 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 // Initialize Cloud Firestore through Firebase
 import { getFirestore } from "firebase/firestore";
 import UsersQuestions from "./views/UsersQuestions.view";
+import MediaQuery from "react-responsive";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -72,49 +73,75 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Layout
-        style={{
-          height: "100vh",
-          fontFamily: "Geogrotesque Regular",
-          backgroundColor: "#dadcdf",
-        }}
-      >
-        <Header
-          style={{ height: "80px", background: "#873c50" }}
-          onClick={() => goToHome()}
+      <div>
+        <Layout
+          style={{
+            height: "100vh",
+            fontFamily: "Geogrotesque Regular",
+            backgroundColor: "#dadcdf",
+          }}
         >
-          <div className="MainHeader">
-            <h4 className="Title">PREGUNTAS DE COLECCIÓN</h4>
-            <h4 className="SubHeader">
-              Un espacio del Museo para la curiosidad
-            </h4>
+          <Header
+            style={{ height: "80px", background: "#873c50" }}
+            onClick={() => goToHome()}
+          >
+            <div className="MainHeader">
+              <MediaQuery minWidth={1224}>
+                <h4 className="Title">PREGUNTAS DE COLECCIÓN</h4>
+                <h4 className="SubHeader">
+                  Un espacio del Museo para la curiosidad
+                </h4>
+              </MediaQuery>
+              <MediaQuery maxWidth={1224}>
+                <h4 className="TitleMobile">PREGUNTAS DE COLECCIÓN</h4>
+                <h4 className="SubHeaderMobile">
+                  Un espacio del Museo para la curiosidad
+                </h4>
+              </MediaQuery>
+            </div>
+          </Header>
+          <Content className="Content">
+            <Routes>
+              <Route
+                path="/"
+                element={<HomeView sendQuestion={sendQuestion} />}
+              />
+              <Route
+                path="museum-asks"
+                element={<MuseumAsks getQuestions={getMuseumQuestions} />}
+              />
+              <Route
+                path="users-questions"
+                element={
+                  <UsersQuestions getUsersQuestions={getUsersQuestions} />
+                }
+              />
+            </Routes>
+          </Content>
+          <div className="Footer" style={{ background: "#dadcdf" }}>
+            <MediaQuery minWidth={1224}>
+              <img
+                src={LogoFilo}
+                alt="Facultad de Filosofía y Letras"
+                className="LogoFilo"
+              />
+              <img src={LogoMuseo} alt="Filosofia" className="LogoMuseo" />
+            </MediaQuery>
+            <MediaQuery maxWidth={1224}>
+              <img
+                src={LogoFilo}
+                alt="Facultad de Filosofía y Letras"
+                className="LogoFiloMobile"
+              />
+              <img
+                src={LogoMuseo}
+                alt="Filosofia"
+                className="LogoMuseoMobile"
+              />
+            </MediaQuery>
           </div>
-        </Header>
-        <Content className="Content">
-          <Routes>
-            <Route
-              path="/"
-              element={<HomeView sendQuestion={sendQuestion} />}
-            />
-            <Route
-              path="museum-asks"
-              element={<MuseumAsks getQuestions={getMuseumQuestions} />}
-            />
-            <Route
-              path="users-questions"
-              element={<UsersQuestions getUsersQuestions={getUsersQuestions} />}
-            />
-          </Routes>
-        </Content>
-        <div className="Footer" style={{ background: "#dadcdf" }}>
-          <img
-            src={LogoFilo}
-            alt="Facultad de Filosofía y Letras"
-            className="LogoFilo"
-          />
-          <img src={LogoMuseo} alt="Filosofia" className="LogoMuseo" />
-        </div>
-      </Layout>
+        </Layout>
+      </div>
     </BrowserRouter>
   );
 }

@@ -18,6 +18,12 @@ h4 {
   font-size: 18px;
 }
 
+.SubHeaderMobile {
+  position: absolute;
+  top: 26px;
+  font-size: 14px;
+}
+
 .Content {
   display: flex;
   justify-content: center;
@@ -38,9 +44,20 @@ h4 {
   font-size: 28px;
 }
 
+.TitleMobile {
+  width: 100%;
+  font-size: 18px;
+}
+
 .Subtitle {
   width: 80%;
   font-size: 20px;
+  text-align: center;
+}
+
+.SubtitleMobile {
+  width: 80%;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -50,8 +67,22 @@ h4 {
   text-align: center;
 }
 
-.ant-input:placeholder-shown {
-  font-size: 18px !important;
+.ThanksMobile {
+  margin-top: 1rem;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1224px) {
+  .ant-input:placeholder-shown {
+    font-size: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 1224px) {
+  .ant-input:placeholder-shown {
+    font-size: 14px !important;
+  }
 }
 
 .ButtonQuestion {
@@ -69,12 +100,22 @@ h4 {
   width: 50%;
 }
 
+.MuseumQuestionMobile {
+  background-color: #873c50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 50%;
+  font-size: 16px;
+}
+
 .UsersQuestions {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .FormAndImages {
@@ -111,6 +152,19 @@ h4 {
 
 .LogoMuseo {
   margin-left: 1rem;
+  border: 1px solid black;
+}
+
+.LogoFiloMobile {
+  width: 120px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.LogoMuseoMobile {
+  margin-left: 1rem;
+  width: 120px;
+  height: 60px;
   border: 1px solid black;
 }
 

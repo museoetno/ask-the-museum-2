@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Card } from "antd";
 import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 function UsersQuestions({ getUsersQuestions }) {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const [activeQuestions, setActiveQuestions] = useState([]);
 
   const getActiveQuestions = async () => {
@@ -17,8 +19,10 @@ function UsersQuestions({ getUsersQuestions }) {
     getActiveQuestions();
   }, []);
 
+  const checkMobile = () => (isTabletOrMobile ? "column" : "row");
+
   return (
-    <div className="UsersQuestions">
+    <div className="UsersQuestions" style={{ flexDirection: checkMobile() }}>
       {activeQuestions.map((q) => (
         <Card
           bordered

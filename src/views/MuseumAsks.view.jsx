@@ -3,6 +3,7 @@ import { Button } from "antd";
 import React, { useEffect, useState } from "react";
 import Museo3 from "../images/imagen_museo_3_medium.png";
 import Museo4 from "../images/imagen_museo_4_medium.png";
+import MediaQuery from "react-responsive";
 
 function MuseumAsks({ getQuestions }) {
   const [museumQuestion, setMuseumQuestion] = useState(null);
@@ -35,14 +36,26 @@ function MuseumAsks({ getQuestions }) {
 
   return (
     <div>
-      <h3 className="Thanks">
-        Gracias por dejarnos tu pregunta. El museo te regala una:
-      </h3>
+      <MediaQuery minWidth={1224}>
+        <h3 className="Thanks">
+          Gracias por dejarnos tu pregunta. El museo te regala una:
+        </h3>
+      </MediaQuery>
+      <MediaQuery maxWidth={1224}>
+        <h3 className="ThanksMobile">
+          Gracias por dejarnos tu pregunta. El museo te regala una:
+        </h3>
+      </MediaQuery>
 
       <div className="MuseumAsksImages">
-        <img src={Museo3} alt="MuseoEtnografico" className="ImagenMuseo3" />
-        <h2 className="MuseumQuestion">{museumQuestion}</h2>
-        <img src={Museo4} alt="MuseoEtnografico" className="ImagenMuseo4" />
+        <MediaQuery minWidth={1224}>
+          <img src={Museo3} alt="MuseoEtnografico" className="ImagenMuseo3" />
+          <h2 className="MuseumQuestion">{museumQuestion}</h2>
+          <img src={Museo4} alt="MuseoEtnografico" className="ImagenMuseo4" />
+        </MediaQuery>
+        <MediaQuery maxWidth={1224}>
+          <h2 className="MuseumQuestionMobile">{museumQuestion}</h2>
+        </MediaQuery>
       </div>
 
       <div className="ButtonQuestion">
