@@ -146,8 +146,14 @@ function App() {
                   src={LogoFilo}
                   alt="Facultad de Filosofía y Letras"
                   className="LogoFilo"
+                  onClick={() => goToFilo()}
                 />
-                <img src={LogoMuseo} alt="Filosofia" className="LogoMuseo" />
+                <img
+                  src={LogoMuseo}
+                  alt="Filosofia"
+                  className="LogoMuseo"
+                  onClick={() => goToMuseoEtno()}
+                />
               </MediaQuery>
               <MediaQuery maxWidth={1224}>
                 <img
